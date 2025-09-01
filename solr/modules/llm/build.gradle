@@ -32,13 +32,13 @@ dependencies {
   runtimeOnly libs.langchain4j.hugging.face
   runtimeOnly libs.langchain4j.mistral.ai
   runtimeOnly libs.langchain4j.open.ai
+  runtimeOnly libs.langchain4j.ollama
 
   implementation libs.slf4j.api
 
   testImplementation project(':solr:test-framework')
   testImplementation libs.junit.junit
   testImplementation libs.commonsio.commonsio
-  
 }
 
 // langchain4j has reflection issues, and requires the following permissions

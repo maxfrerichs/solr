@@ -172,6 +172,25 @@ public class TestModelManager extends TestLlmBase {
   }
 
   @Test
+  public void loadModel_ollama_shouldLoadModelConfig() throws Exception {
+    loadModel("ollama-model.json");
+    final String modelName = "ollama-1";
+    assertJQ(ManagedTextToVectorModelStore.REST_END_POINT, "/models/[0]/name=='" + modelName + "'");
+    assertJQ(
+        ManagedTextToVectorModelStore.REST_END_POINT,
+        "/models/[0]/params/baseUrl=='http://localhost:11434/'");
+    assertJQ(
+        ManagedTextToVectorModelStore.REST_END_POINT,
+        "/models/[0]/params/modelName=='nomic-embed-text'");
+    assertJQ(ManagedTextToVectorModelStore.REST_END_POINT, "/models/[0]/params/timeout==60");
+    assertJQ(ManagedTextToVectorModelStore.REST_END_POINT, "/models/[0]/params/logRequests==true");
+    assertJQ(ManagedTextToVectorModelStore.REST_END_POINT, "/models/[0]/params/logResponses==true");
+    assertJQ(ManagedTextToVectorModelStore.REST_END_POINT, "/models/[0]/params/maxRetries==5");
+
+    restTestHarness.delete(ManagedTextToVectorModelStore.REST_END_POINT + "/" + modelName);
+  }
+
+  @Test
   public void loadModel_mistralAi_shouldLoadModelConfig() throws Exception {
     loadModel("mistralai-model.json");
 

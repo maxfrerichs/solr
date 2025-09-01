@@ -63,9 +63,11 @@ grant {
   permission java.lang.reflect.ReflectPermission "newProxyInPackage.dev.langchain4j.model.cohere";
   permission java.lang.reflect.ReflectPermission "newProxyInPackage.dev.ai4j.openai4j";
   permission java.lang.reflect.ReflectPermission "newProxyInPackage.dev.langchain4j.model.huggingface";
+  permission java.lang.reflect.ReflectPermission "newProxyInPackage.dev.langchain4j.model.ollama";
   permission java.net.SocketPermission "api.cohere.ai", "accept,listen,connect,resolve";
   permission java.net.SocketPermission "api.openai.com", "accept,listen,connect,resolve";
   permission java.net.SocketPermission "api.mistral.ai", "accept,listen,connect,resolve";
+  permission java.net.SocketPermission "localhost:11434", "accept,listen,connect,resolve";
   permission java.net.SocketPermission "api-inference.huggingface.co", "accept,listen,connect,resolve";
   permission java.net.SocketPermission "langchain4j.dev", "accept,listen,connect,resolve";
 
@@ -132,7 +134,7 @@ grant {
   permission javax.management.MBeanServerPermission "releaseMBeanServer";
   permission javax.management.MBeanTrustPermission "register";
 
-  
+
   // needed by crossdc
   permission javax.security.auth.AuthPermission "getLoginConfiguration";
   permission javax.security.auth.AuthPermission "setLoginConfiguration";
