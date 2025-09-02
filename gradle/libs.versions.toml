@@ -450,8 +450,8 @@ langchain4j-cohere = { module = "dev.langchain4j:langchain4j-cohere", version.re
 langchain4j-core = { module = "dev.langchain4j:langchain4j-core", version.ref = "langchain4j" }
 langchain4j-hugging-face = { module = "dev.langchain4j:langchain4j-hugging-face", version.ref = "langchain4j" }
 langchain4j-mistral-ai = { module = "dev.langchain4j:langchain4j-mistral-ai", version.ref = "langchain4j" }
-langchain4j-open-ai = { module = "dev.langchain4j:langchain4j-open-ai", version.ref = "langchain4j" }
 langchain4j-ollama = { module = "dev.langchain4j:langchain4j-ollama", version.ref = "langchain4j" }
+langchain4j-open-ai = { module = "dev.langchain4j:langchain4j-open-ai", version.ref = "langchain4j" }
 lmax-disruptor = { module = "com.lmax:disruptor", version.ref = "lmax-disruptor" }
 locationtech-spatial4j = { module = "org.locationtech.spatial4j:spatial4j", version.ref = "spatial4j" }
 mockito-core = { module = "org.mockito:mockito-core", version.ref = "mockito" }
